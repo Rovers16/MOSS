@@ -1,9 +1,5 @@
-# =============================================================================
-# test_sync.py  —  pytest tests for Subsystem C: Synchronization & Protection
-# COSC 514 | MOSS Project
-# =============================================================================
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src', 'sync'))
 from sync import (Mutex, Semaphore, ProducerConsumer, AccessControl,
                   SyncManager, SUCCESS, ERR_LOCKED, ERR_DENIED,
                   ERR_NOT_OWNER, ERR_INVALID)

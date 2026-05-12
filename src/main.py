@@ -1,19 +1,20 @@
 # =============================================================================
 # main.py  —  MOSS: Mini Operating System Services Simulator
 # COSC 514 | Unified Command-Line Interface
+# Entry point: run with  python3 src/main.py  from project root
 # =============================================================================
 import sys
 import os
 
+# Add subsystem directories to path
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-if BASE_DIR not in sys.path:
-    sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, "sched"))
+sys.path.insert(0, os.path.join(BASE_DIR, "mem"))
+sys.path.insert(0, os.path.join(BASE_DIR, "sync"))
 
 from cpu_sched import Scheduler
 from mem       import MemoryManager
 from sync      import SyncManager
-
-
 class MOSS:
 
     def __init__(self):

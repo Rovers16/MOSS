@@ -1,9 +1,5 @@
-# =============================================================================
-# test_mem.py  —  pytest tests for Subsystem B: Memory Management
-# COSC 514 | MOSS Project
-# =============================================================================
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src', 'mem'))
 from mem import MemoryManager, SUCCESS, ERR_FAULT, ERR_INVALID
 
 REF = [1, 2, 3, 2, 4, 1, 3]   # Lab 6 reference string, 3 frames

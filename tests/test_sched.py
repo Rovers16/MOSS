@@ -1,9 +1,5 @@
-# =============================================================================
-# test_sched.py  —  pytest tests for Subsystem A: CPU Scheduling
-# COSC 514 | MOSS Project
-# =============================================================================
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src', 'sched'))
 from cpu_sched import Scheduler, SUCCESS, ERR_INVALID
 
 WORKLOAD = [
